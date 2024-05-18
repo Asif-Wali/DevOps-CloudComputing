@@ -1,3 +1,4 @@
+# Lecture 1
 # Python is a programming language. Programming languages are of two types: 1. Compiled(Java, C++) and 2. Interpreted(Python).
 # The Programming language code is first compiled where it checks that the syntax is correct and error free. After compilation the code is then translated to Byte Code and then it is finally executed. This is the case of Compiled Language.
 # The programming language where the code is checked line by line and executed simultaneously without any syntatical check is called Interpreted language. Interpreted Programming language is slow as compared to compiled type programming language.
@@ -91,3 +92,5 @@ print("How are you?")
 print("Hello", end=" ")
 print("world!", end=" ")
 print("How are you?", end=" ")
+
+
