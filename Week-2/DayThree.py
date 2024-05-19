@@ -130,4 +130,107 @@ outer()() #This line will directly call the function inside the outer function i
 
 
 
+#Pass by Value in Python
 
+# An argument is passed by two ways in a function , 
+'''
+1. Pass by value:-> Pass by value means where we send the copy of the value and not the orignal  value
+2. Pass by  reference
+
+
+
+'''
+
+num_1=5
+
+def modify_num(num):
+    num=num+1
+    print(num)
+
+modify_num(num_1) 
+
+print("Original Num", num_1)
+
+'''
+In the above example we are sending the copy of the value of num_1 to the function modify_num.
+In the function modify_num we are adding 1 to the value of num and printing it which will be 6.
+In the last line we are printing the value of num_1 which is still 5. '''
+
+# Pass by reference
+
+mylist=[1,2,3,4]
+def modiyList(li):
+    li.append(5)
+    print(li)
+print("Before Calling Fun", mylist)
+
+modiyList(mylist)
+
+print("After Calling Fun", mylist)
+
+'''
+In the above example we are sending the the original address of mylist to the function modiyList.
+In the function modiyList we are appending 5 to the list and printing it which will be [1,2,3,4,5].
+In the last line we are printing the value of mylist which is [1,2,3,4,5]. '''
+
+
+# so if the Data type is immutable the Data type will be send as a value/Copy of the original but if the Data type is mutable then the value is sent as original data type and then inside the function it is changed
+
+
+# Lambda Function
+
+'''
+A lambda function is a small anonymous function.
+
+A lambda function can take any number of arguments, but can only have one expression.
+
+'''
+
+func=lambda x: x+10
+
+print(func(10))
+
+func2=lambda x,y: x+y
+
+print(func2(10,20))
+
+# Lambda function become very handy in nested functions
+
+def outer():
+        return lambda msg: print(msg)
+    
+outer()("Hello, World!")
+
+# Modules and Packages
+
+'''
+Modular Programming 
+is a programming technique which tells us to divide program into different files and folders to make our code simpler and easier to read
+
+'''
+import Module
+Module.cube(5)
+
+import Module as M # using alias for module.
+M.cube(5)
+
+from Module import * # it will import all the contents of this module   
+
+cube(5)
+
+from Module import cube # it will import only the cube function from the module.
+
+cube(5)
+#inbuilt Modules
+
+import sys
+
+print(sys.path)
+
+#Package
+'''
+The difference between the module and the package is that the module represents one single python file while as the package represents the folder containing 
+multiple python files.Usually it has --init-- file which holds the code that we want to run before the initialization of the package
+
+'''
+# from Mypackage import module1, Module2  # This is how we import the modules from package and with this we have completed our 2nd week
